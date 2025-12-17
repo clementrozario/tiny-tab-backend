@@ -1,5 +1,5 @@
 import { integer, jsonb, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
-import { users } from "./users.js";
+import { users } from "./users";
 
 export const templates = pgTable('templates', {
     id: serial('id').primaryKey(),

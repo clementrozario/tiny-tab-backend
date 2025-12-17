@@ -8,6 +8,13 @@
       "when": 1765798817412,
       "tag": "0000_optimal_boomerang",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1765966299647,
+      "tag": "0001_cloudy_wendell_vaughn",
+      "breakpoints": true
     }
   ]
 }

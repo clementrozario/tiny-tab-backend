@@ -1,5 +1,5 @@
 import { integer, numeric, pgTable, serial, text } from "drizzle-orm/pg-core";
-import { invoices } from "./invoices.js";
+import { invoices } from "./invoices";
 
 
 export const invoice_items = pgTable('invoice_items', {

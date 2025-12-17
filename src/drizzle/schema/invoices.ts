@@ -1,5 +1,5 @@
 import { integer, numeric, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
-import { users } from "./users.js";
+import { users } from "./users";
 
 export const invoices = pgTable('invoices', {
     id: serial('id').primaryKey(),
