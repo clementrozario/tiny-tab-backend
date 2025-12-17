@@ -1,7 +1,7 @@
 import { integer, numeric, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
-import { users } from "./user.js";
+import { users } from "./users.js";
 
-export const invoices = pgTable('invoice', {
+export const invoices = pgTable('invoices', {
     id: serial('id').primaryKey(),
     userId: integer('user_id').references(() => users.id, { onDelete: 'cascade' }),
     invoiceNumber: varchar('invoice_number', { length: 50 }).notNull(),

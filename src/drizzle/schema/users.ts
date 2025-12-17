@@ -11,5 +11,5 @@ export const users = pgTable("users", {
     defaultCurrency: varchar('default_currency', { length: 3 }).default('USD'),
     logoUrl: text('logo_url'),
     createdAt: timestamp('created_at').defaultNow().notNull(),
-    updatedAt: timestamp('updated_at').defaultNow().notNull(),
+    updatedAt: timestamp('updated_at').defaultNow().notNull()
 })
