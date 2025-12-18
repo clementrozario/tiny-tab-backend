@@ -1,12 +1,23 @@
+import 'dotenv/config'
 import express from 'express'
+import { db } from './db';
+import { users } from './drizzle/schema';
+
 
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-    res.send('Hello World!')
-});
+async function startServer() {
+    try {
+        await db.select().from(users).limit(1);
+        console.log('database connected successfully');
+        app.listen(port, () => {
+            console.log(`server is running on port: ${port}`)
+        })
+    } catch (err) {
+        console.log('error connecting to databse', err);
+        process.exit(1)
+    }
+}
 
-app.listen(port, () => {
-    console.log(`server is running on port: ${port}`)
-})
+startServer();
