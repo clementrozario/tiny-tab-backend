@@ -2,10 +2,13 @@ import 'dotenv/config'
 import express from 'express'
 import { db } from './db';
 import { users } from './drizzle/schema';
+import invoiceRouter from './routes/invoice.routes'
 
 
 const app = express();
 const port = 3000;
+
+app.use('/invoices', invoiceRouter);
 
 async function startServer() {
     try {
