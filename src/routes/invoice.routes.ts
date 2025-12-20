@@ -8,3 +8,8 @@ router.get('/', (req, res) => {
 
 export default router
 
+/* TODO: need to Replace dummy data with real Neon DB query
+  const result = await db.query.invoices.findMany({
+    with: { items: true }
+  });
+*/
