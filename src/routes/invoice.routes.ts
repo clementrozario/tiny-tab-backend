@@ -1,15 +1,9 @@
-import express from 'express'
+import { Router } from 'express';
+import { getAll } from '../controllers/invoice.controller';
 
-const router = express.Router()
+const router = Router()
 
-router.get('/', (req, res) => {
-    res.json({ message: "Invoice route working!", invoices: [] });
-})
+router.get('/', getAll)
 
 export default router
 
-/* TODO: need to Replace dummy data with real Neon DB query
-  const result = await db.query.invoices.findMany({
-    with: { items: true }
-  });
-*/
