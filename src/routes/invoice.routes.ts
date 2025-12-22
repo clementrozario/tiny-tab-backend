@@ -1,9 +1,10 @@
 import { Router } from 'express';
-import { getAll } from '../controllers/invoice.controller';
+import { getAll, getById } from '../controllers/invoice.controller';
 
 const router = Router()
 
 router.get('/', getAll)
+router.get('/:id',getById)
 
 export default router
 
